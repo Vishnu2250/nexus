@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+body{
+    background-color: #e6b3eb;
+    color: #080121;
+}
+.size{
+    height: 120px;
+    width: 316px;
+    position: relative;
+}
+.bg{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e2ba3f;
+    border-radius: 50%;
+}
+.left{
+    height: 100px;
+    width: auto;
+    margin: 1rem;
+}
+.dimensions{
+    height: 300px;
+    width: 300px;
+}
+.dimension{
+    height: 300px;
+    width: 328px;
+    border-radius: 50%;
+}
+.socialacc{
+    height: 30px;
+    width: 30px;
+}
+@media screen and (min-width:360px) {
+    header nav{
+        margin: 1rem;
+    }
+    header nav .left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header nav .right ul{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        list-style: none;
+    }
+    header nav .right ul li{
+        padding: 0.5rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header nav .right ul li a{
+        text-decoration: none;
+        color: #120239;
+    }
+    header nav .right ul li a:hover{
+        text-decoration:underline
+    }
+    header nav .right ul li button, header .down button, header nav .right ul li select{
+        padding: 0.6rem;
+        border: none;
+        border-radius: 20px;
+        background-color: #260656;
+        color: white;
+        text-align: center;
+        width:max-content;
+        cursor: pointer;
+    }
+    header nav .right ul li button a{
+        text-decoration: none;
+        color: white;
+    }
+    header nav .right ul li button a:hover{
+        text-decoration: underline;
+    }
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.4);
+    }  
+    .modal-content {
+        background-color: #fff;
+        margin: 15% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-width: 400px;
+        border-radius: 10px;
+        position: relative;
+    }  
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }  
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }  
+    h2 {
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+    .password-container {
+        position: relative;
+    }
+    .password-container .toggle-password {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    .modal-content button {
+        padding: 0.5rem;
+        margin: 0.5rem;
+        background-color: #260656;
+        border: none;
+        color: white;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    #loginMessage, #signupMessage {
+        margin-top: 15px;
+        color: red;
+        text-align: center;
+    }
+    header .down .image{
+        display: flex;
+        justify-content: center;
+    }
+    header .down p{
+        padding: 1rem;
+    }
+    header .down .button{
+        display: flex;
+        justify-content: center;
+    }
+    header .down button{
+        font-size: larger;
+        width: 10rem;
+    }
+    main{
+        text-align: center;
+    }
+    main h2, footer h2{
+        margin: 0.3rem;
+    }
+    main .items{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    main .items .item{
+        height: 360px;
+        width: 340px;
+        border: 2px solid black;
+        margin: 0.5rem 0;
+        border-radius: 30px;
+    }
+    main .items .item img{
+        margin: 0.5rem;
+        height: 280px;
+        width: 280px;
+        border-radius: 50%;
+    }
+    main .items .item p, h4{
+        margin: 0.3rem;
+    }
+    footer{
+        background: #a580ca;
+        text-align: center;
+    }
+    footer .one, .two, .three, .four, .five, .six{
+        margin: 1rem;
+    }
+    footer ul{
+        list-style: none;
+    }
+    footer h3{
+        margin: 0.5rem;
+        font-size: larger;
+        font-weight: 900;
+    }
+    footer ul li{
+        margin: 0.3rem;
+        font-size: large;
+        font-weight: 500;
+        color: #4a1985;
+    }
+    footer .six ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer .six ul li{
+        margin: 0.5rem;
+    }
+}
+@media screen and (min-width:700px) {
+    header nav{
+        display: grid;
+        grid-template-columns: 35% auto;
+        justify-content: center;
+    }
+    header nav .right ul{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        list-style: none;
+    }
+    header .down{
+        display: grid;
+        grid-template-columns: 60% auto;
+    }
+    header .down p{
+        margin-top: 2rem;
+        padding: 0.5rem;
+        line-height: 1.5rem;
+    }
+    main .items{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    main .items .item{
+        margin-left:0.5rem;
+    }
+    footer .items{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (min-width:800px){
+    main .items .item{
+        margin-left:2rem;
+    }
+}
+@media screen and (min-width:900px){
+    main .items .item{
+        margin-left:4rem;
+    }
+}
+@media screen and (min-width:1050px){
+    header .down{
+        display: grid;
+        grid-template-columns: 50% auto;
+    }
+    header .down p{
+        padding-right: 4rem;
+        line-height: 1.7rem;
+    }
+    main .items{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    main .items .item{
+        margin-left:0.6rem;
+    }
+    footer .items{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (min-width:1200px){
+    main .items .item{
+        margin-left: 2rem;
+    }
+}
