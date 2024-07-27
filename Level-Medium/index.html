@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <img src="./images/logo.png" alt="" class="size">
+                <div class="bg"></div>
+            </div>
+            <div class="right">
+                <ul>
+                    <li>
+                        <button onclick="openModal('login')">Login</button>
+                    </li>
+                    <li>
+                        <button onclick="openModal('signup')">Sign Up</button>
+                    </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="">Spring Offers</a></li>
+                    <li>
+                        <select name="Type Of Food" id="Type Of Food">
+                            <option value="Type Of Food">Type Of Food</option>
+                            <option value="Continental">Continental</option>
+                            <option value="Asian">Asian</option>
+                            <option value="Indian">Indian</option>
+                            <option value="South Indian">South Indian</option>
+                            <option value="North Indian">North Indian</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="Thai">Thai</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select name="Desserts" id="Desserts">
+                            <option value="Desserts">Desserts</option>
+                            <option value="Cupcake">Cupcake</option>
+                            <option value="Cakes">Cakes</option>
+                            <option value="Doughnuts">Doughnuts</option>
+                            <option value="Choco Balls">Choco Balls</option>
+                        </select>
+                    </li>
+                    <li><a href="#aboutUs">About Us</a></li>
+                    <li><a href="#aboutUs">Contact Us</a></li>
+                </ul>
+            </div>
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('login')">&times;</span>
+                    <h2>Login</h2>
+                    <form onsubmit="handleLogin(event)">
+                        <div class="form-group">
+                            <label for="loginUsername">Username</label>
+                            <input type="text" id="loginUsername" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <div class="password-container">
+                                <input type="password" id="loginPassword" name="password" required>
+                                <span onclick="togglePassword('loginPassword')" class="toggle-password">&#128065;</span>
+                            </div>
+                        </div>
+                        <button type="submit">Login</button>
+                    </form>
+                    <div id="loginMessage"></div>
+                </div>
+            </div>
+        
+            <div id="signupModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('signup')">&times;</span>
+                    <h2>Sign Up</h2>
+                    <form onsubmit="handleSignup(event)">
+                        <div class="form-group">
+                            <label for="signupUsername">Username</label>
+                            <input type="text" id="signupUsername" name="username" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <div class="password-container">
+                                <input type="password" id="signupPassword" name="password" required>
+                                <span onclick="togglePassword('signupPassword')" class="toggle-password">&#128065;</span>
+                            </div>
+                        </div>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <div id="signupMessage"></div>
+                </div>
+            </div>
+        </nav>
+        <div class="down">
+            <div class="image">
+                <img src="./images/salads.jpeg" alt="" class="dimension">
+            </div>
+            <div class="right">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum neque id debitis adipisci magni <br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim nobis quis cum, nihil autem, ipsam illo aperiam ea deserunt voluptas perferendis nam magni quo fugiat.</p>
+                <div class="button">
+                    <button>Order Now   ➡</button>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <main>
+        <h2>Today's Offers</h2>
+        <div class="items">
+            <div class="item">
+                <img src="./images/chocosIcecream.jpeg" alt="" class="dimensions">
+                <p>Lorem ipsum dolor</p>
+                <h4>PRICE: 40$</h4>
+            </div>
+            <div class="item">
+                <img src="./images/ConeIcecreamwithSprinklesonit.jpeg" alt="" class="dimensions">
+                <p>Lorem ipsum dolor</p>
+                <h4>PRICE: 40$</h4>
+            </div>
+            <div class="item">
+                <img src="./images/DarkChocolateScoobs.jpeg" alt="" class="dimensions">
+                <p>Lorem ipsum dolor</p>
+                <h4>PRICE: 40$</h4>
+            </div>
+            <div class="item">
+                <img src="./images/ThickShake.jpeg" alt="" class="dimensions">
+                <p>Lorem ipsum dolor</p>
+                <h4>PRICE: 40$</h4>
+            </div>
+            <div class="item">
+                <img src="./images/WhiteChocolateScoobWithStrawberry.jpeg" alt="" class="dimensions">
+                <p>Lorem ipsum dolor</p>
+                <h4>PRICE: 40$</h4>
+            </div>
+            <div class="item">
+                <img src="./images/WhiteWhippedCreamWithCherries.jpeg" alt="" class="dimensions">
+                <p>Lorem ipsum dolor</p>
+                <h4>PRICE: 40$</h4>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <h2 id="aboutUs">ABOUT US</h2>
+        <div class="items">
+            <div class="one">
+                <h3>CONTENT</h3>
+                <ul>
+                    <li>Calender Of Festives</li>
+                    <li>The most popular OFFERS</li>
+                    <li>Search your FAVOURITE FOODS</li>
+                    <li>Blog</li>
+                </ul>
+            </div>
+            <div class="two">
+                <h3>INFORMATION</h3>
+                <ul>
+                    <li>Pricing</li>
+                    <li>About us</li>
+                    <li>API</li>
+                    <li>Jobs</li>
+                    <li>Events</li>
+                    <li>Cost Guidelines</li>
+                </ul>
+            </div>
+            <div class="three">
+                <h3>LEGAL</h3>
+                <ul>
+                    <li>Terms of use</li>
+                    <li>License Agreement</li>
+                    <li>Privacy policy</li>
+                    <li>Copyright Information</li>
+                    <li>Cookies policy</li>
+                    <li>Cookies Settings</li>
+                </ul>
+            </div>
+            <div class="four">
+                <h3>SUPPORT</h3>
+                <ul>
+                    <li>FAQ</li>
+                    <li>Search guide</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="five">
+                <h3>JOBS</h3>
+                <ul>
+                    <li>Find your next Job here</li>
+                    <li>Post a Job</li>
+                </ul>
+            </div>
+            <div class="six">
+                <h3>SOCIAL MEDIA</h3>
+                <ul>
+                    <li><img src="./images/telephone-handle-silhouette.png" alt="" class="socialacc"></li></li>
+                    <li><img src="./images/facebook-app-symbol.png" alt="" class="socialacc"></li>
+                    <li><img src="./images/instagram.png" alt="" class="socialacc"></li>
+                    <li><img src="./images/linkedin.png" alt="" class="socialacc"></li>
+                    <li><img src="./images/pintrest.png" alt="" class="socialacc"></li>
+                    <li><img src="./images/twitter.png" alt="" class="socialacc"></li>
+                    <li><img src="./images/youtube.png" alt="" class="socialacc"></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
